@@ -1,0 +1,96 @@
+Root Directory (/)
+Everything start from one single root called "/"
+Ex:- A big House
+Inside the  house are many rooms (kitchen, Bedroom, Bathroom)
+Same way linux has a folder/Directory inside /.
+Linux file system Structure 
+-------------------------------------------
+├── bin
+├── etc
+├── home
+├── var
+├── tmp
+├── usr
+├── opt
+├── dev
+├── boot
+└── root
+---------------------------------------------------------------------------
+1. /home:- User's personal 
+Ex:- /home/priyanshu, /home/Rahul
+inside this folder user store (Documents, Projects, Photos, Scripts)
+----------------------------------------------------------------------------
+2. /root:- Admin Private (Administrator)
+Easily, normal user cannot access it.
+/root is the home directory of the root user (administrator).
+----------------------------------------------------------------------------
+3. /bin:- Basic commands box bin means binary
+It stores importent commands like (ls, pwd, mv, cat)
+/bin contains essential user commands required for system operation.
+-----------------------------------------------------------------------------
+4. /etc:- System Setting folder 
+It store configurations files 
+like (User Password, Netwoork setting, SSH setting, Hostname)
+/etc/passwd
+/etc/ssh/sshd_config
+/etc contains system-wide configuration files.
+------------------------------------------------------------------------------
+5. /var:- Changing Data Folder 
+var = Variable
+here Data changes continuously 
+ex:- (logs, cache, Mail, Database files ) like Daily activity register.
+/var stores variable data such as logs, cache, and spool files.
+------------------------------------------------------------------------------
+6. /temp:- Tempory files (Used for Temporary storage)
+Ex;- application temp files, Cache, Session File.
+Linux may automatically delete files here after reboot. like a Dustbin or temporary desk.
+/tmp stores temporary files created by applications and users.
+------------------------------------------------------------------------------
+7. /usr:- Installed Software Area 
+it contrtains (Application, liibraries, Documentation)
+/usr contains user applications, libraries, and utilities.
+------------------------------------------------------------------------------
+8. /boot:- Syatem Setup files (Contains files needed to boot linux )
+ex:- Kernal, GRUB bootloader (Grand Unified Bootloader)  the initial software program that runs when you power 
+on a Linux computer, responsible for loading the operating system kernel into memory.
+/boot contains bootloader and kernel files required during system startup.
+--------------------------------------------------------------------------------------------------
+9. /dev:- Drives files (in linux drivers are treated like files)
+Ex:- (Hard disk, USB, Keyword)
+/dev contains device files representing hardware devices.
+--------------------------------------------------------------------------------------------------
+10. /opt:- Optional software ( its use for third-party applications)
+Ex:- (Google chrome, custom apps)
+/opt stores optional and third-party software packages.
+-----------------------------------------------------------------------------------------------
+LINUX FILE SYSTEMS RE-CAPE
+Linux file system starts from the root directory `/`.
+
+Inside root, different directories are used for different purposes.
+
+For example:
+
+* `/home` stores users’ personal files
+* `/root` is the root user’s home directory
+* `/bin` contains essential commands
+* `/etc` stores configuration files
+* `/var` contains logs and variable data
+* `/tmp` stores temporary files
+* `/boot` contains boot files
+* `/dev` contains device files
+
+In Linux, everything is treated as a file, including hardware devices.
+-------------------------------------------------------------------------------------------------
+Path:- a string of characters that identifies the exact location of a file or directory within the filesystem
+1. Absolute PathsAn absolute path is the complete address of a file or folder, starting from the
+    root directory (denoted by /). It works from anywhere in the system, regardless of your current directory.
+Example: /home/username/documents/file.txt
+
+2. Relative PathsA relative path is the location of a file or directory in relation to your current working directory.
+    It never starts with a forward slash. To make navigating easier, Linux uses the following shortcuts:
+. (single dot) Represents the current directory.
+.. (double dot): Represents the parent directory.
+~ (tilde): Represents the current user's home directory (e.g., /home/username).
+Example: If you are already inside /home/username/, 
+          the relative path to your documents is documents/file.txt.
+
