@@ -1,0 +1,38 @@
+Note:- "useradd -c <comment username>" = Add discription to the user
+------------------------------------------------------------------------
+---------------- { Adding the user and set user }-----------------------
+1. useradd (username) = Adding a user by the root user. 
+Note:- " vim/etc/passwd = for checking the user i created or not 
+
+2. passwd (username) = assine some password 
+Note:- " cat /etc/shadow = it will show incripted password 
+
+3. userdel (username) = Delete the user
+
+4. exit = To come out to any user and group
+
+5. change -M 90 (username) = The password you will change in 90 Days
+
+6. passwd -l (username) = lock a user account's password
+
+7. passwd -u (username) = unlock user
+
+8. su -username = switch user 
+
+9. chown newname : newname file name = It will change both the user owner and the group owner of a file or directory.
+
+10. chown : newname  file name = After the colon ":" it change the group owner of the file 
+
+11. chown newname file name  = Before the colon it will change the  owner of the file 
+
+12. sudo su = switch user 
+
+--------------------------------------------------------------------------------------------------------------
+------------------------------{ Adding the Group }-----------------------------------------------
+
+1. groupadd (name of group) = Create group 
+Note:- ( /etc/group = for checking the group is created or not 
+
+2. usermod -aG [ groupname ] [ username] = Add user in the group 
+3. usermod -g [new user name]  [group name] = It use to change the primary group 
+4. usermod -c username = To add comments to the user discriotion 
