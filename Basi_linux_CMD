@@ -1,0 +1,14 @@
+1. (ls) = List files / Directories in current locations 
+2. (cd) = Change the current working directory 
+3. (cd ..) = Back to the previous directory
+4. (pwd) = Its shows present working directory
+5. (mkdir) = Create a new Directory
+6. (rmdir) = Remove the directory
+7. (rm filename) = Remove the file 
+8. (cp file1.txt file2.txt) = copy the file (Following path to destination path)
+9. (cp -r dir1  dir2) = Copies the directorys (Following path to destination path)
+10. (mv old filename new filename) = Move or rename the file or directorys 
+11. (rm -rf file/directory name) = Remove directory and files from the directorys then delete it self (it very DANGER cmd)
+12. (find . -name <directory/filename>) = It will give the path of the file where it located.
+-------------------------------------------------------------------------------------------------------------------------------
+# Note:- ( ssh-keygen -t rsa) = It generate the ssh key pair " RSA = it specify the type of the key " 
