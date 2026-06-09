@@ -1,0 +1,27 @@
+--------------------  File Managment Commands -------------------------------
+-------------------------------------------------------------------------------------------------------
+1. cat = Display the file content.
+2. touch = Create the file.
+3. nano = Open in simple text editor or create file 
+4. vi = Open a poerrfull text editor or create file
+5. tac = Display the file content in a reverse order
+6. less = Open a file for viewing with scrolling
+7. more = Similer to less but only move forwords
+8. head -n10 = Display the first 10 lines from the file
+9. tail -n10 = Display the last 10 lines from the file
+10. ./ filename  = execute the file 
+11. cat > filename = Replace the file text 
+12. cat >> filename = append text to the end of a file without deleting or modifying its existing content
+13. echo 'Text' > filename = Write text to a file, overwrite content
+14. echo 'Text' >> filename = Append text to a file with overwrite
+15. grep -<searching word> filename = Search that perticuler word in the file 
+16. grep -i <word> filemame = Search by ignoring case 
+---------------------------------------------------------------------------------------------------------------
+------------------------- VI Editor -----------------------------------------------
+There are three modes in vi editior
+a) Normal Mode (default) = Used for nevigating and command's executions. 
+b) Insert Mode = Used for text editing 
+Note:- Press "i" to enter and Ecs for exit
+c) Command Mode = Used for saving, quiting and searching 
+Note:- "Affter writing the content into  the file for saving that file use (:wq!) w = save, q = quite, ! = forces the system to overwrite the file"
+"If there are 100 lines, :number (you will go to that perticuler line)"
