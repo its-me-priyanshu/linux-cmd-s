@@ -1,0 +1,90 @@
+-------------------- File Permissions -----------------------
+File Permissions:- File permissions in Ubuntu/Linux control who can access a file or folder and what actions they can perform.
+------Permission Groups---------
+Ubuntu divides users into 3 groups:
+    Group	    Meaning
+     u	     User/Owner
+     g	       Group
+     o	      Others
+Default Permission  Ex:- -rwx/rw-/r--
+rwx = user = U 
+rw- = group = G
+r-- = other = O
+Here, We can change change Permission in two way,
+a) Symbolic ( rwx )
+b) Numeric  ( 777 )
+
+------Symbolic Permissions----
+Symbol   	  Meaning       	Action
+  r       	 Read	      View file content
+  w	         Write      Edit or modify file
+  x	         Execute	  Run file as program/script
+1. chmod o = wx file name/ directory = Change write or execute permission on others in perticuler file/ directory
+2. chmod g + r file mame / directory = Add the read permission  to the group in the perticuler file 
+3. chmod u - wx file name / directory = Remove the write or execute permission permission to user in the  perticuler file 
+
+--------- Numeric Permission -----------------
+Symbol        Number         Meaning        Action
+  r             4              Read      View the file content 
+  w             2              Write     View and write in the file 
+  x             1              Execute   Execute the file 
+Default Ex:- rxw rwx rwx file name = ( 777)
+user = 7, group = 7, other = 7
+
+-----Add numbers together----------
+Permission	    Value
+ rwx	             7
+ rw-	             6
+ r-x	             5
+ r--              	4
+
+1. chmod 777 file name = Highest permission ( read, write, execute ) to all of them
+2. chmod 400 file name = User have only read permission 
+
+The umask removes permissions from the default permissions:
+
+Files start with 666 (rw-rw-rw-)
+Directories start with 777 (rwxrwxrwx)
+
+steps, Check the current umask
+umask 
+in a symbolic form 
+umask -S
+
+Change umask temporarily
+This affects only the current shell session:
+umask 022
+Examples:
+
+022 → New files: 644, directories: 755
+027 → New files: 640, directories: 750
+077 → New files: 600, directories: 700
+
+Change umask permanently for a user
+Add the desired umask to the user's shell startup file:
+
+nano ~/.bashrc
+Add:
+
+umask 022
+
+Save and reload:
+
+source ~/.bashrc
+
+Alternatively, for login shells:
+
+nano ~/.profile
+
+Add:
+
+umask 022
+
+Log out and back in for it to take effect.
+
+3. umask filename = When we create a file / firectory it assiened some permission which is default, Default umask value is 0022.
+Note:- When we create file that time 666 - 022 = 644 it means that file have 644 defalut permission.
+Note:- If we create directory 777 - 022 = 755 it means that file have 755 permission for the directory
+Note:- If we want we can  change it the value of umask like umask 400, 744 etc 
+
+
