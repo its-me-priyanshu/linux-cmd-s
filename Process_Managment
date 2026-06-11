@@ -1,0 +1,20 @@
+1. ps = Priview the process which is running,
+2. ps aux = List down all the process is running in CPU,
+3. ps aux | nl = It take ps aux output to the next cmd as a input by using the "|" also nl = no. of list want 
+4. ps aux | wc -l = Show how many lines are there in CPU process,
+5. ps -ef = It list down all the process is running in cpu, 
+
+Note :- There is a differnce b/w ( "ps aux" ) and ( "ps -ef" ) in the (ps aux) it will show the  process id's, CPU % utilazation and 
+        memory % utilization, but in (ps -ef) it always shows process id and process relations.
+6. ps aux | grep Java = Grep is use for to filter the process and promt into the terminal in one line,
+7. ps aux | grep java | grep -v grep = It check the Java process is there or not, if not so it will automatically close.
+8. Kill processid = It will kill the perticuler proccess.
+9. Kill -9 process id = It sue for the delete the process forefully.
+10. kill -STOP processid = It will stop the process
+11. Kill -CONT processid = It will resume a process that has been paused or suspended ( Continue process)
+-------------------------------------------------------------------------------------------------------
+--------------- System Msnagment ( Process ) ---------------------------------------------------
+1. systemctl list-units --type = services = It show all the services.
+2. systemctl start service name = It start the service.
+3. systemctl stop service name = It stop the service.
+4. systemctl status service name = It show the status of service.
