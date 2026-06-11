@@ -1,0 +1,16 @@
+------------------------------- Monitoring ------------------------------------------
+1. top = ( It help to list down all the process in perticuler real time according to
+          user of process shows ). This is Difference to ps aux.
+2. htop = Its provide you the better visual of process in the CPU, RAM and disk space 
+            for better understanding, More advance way.
+3. vmstat = It shows how much space you have and how much you used in all directorys
+              it shows CPU, RAM, PROCESS, etc.
+4. free -m = It same as vmstat it also show how  much memory used and how much left but in MB from.
+-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------
+-------------------------------- Disk Managment -----------------------------------------------
+1. df -h = It shows how much space we have, our partition, drives,
+2. du -h filename = it will show file/folder size.
+3. du = Disk space occuried by file/Dirctory.
+4. hostname = Check the Host name.
+5. fdisk -l = List all the disk partitions on  our system.
