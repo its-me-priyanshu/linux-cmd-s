@@ -1,0 +1,56 @@
+----------------------------------- Cronjob ------------------------------------------
+A cron job is a scheduled task in Linux/Unix systems that runs automatically at specified times or intervals.
+It is managed by the cron daemon (background service).
+Cronjob = Think of cron as a scheduler:
+          Run a backup every day at midnight.
+          Execute a script every 5 minutes.
+          Send reports every Monday at 8 AM.
+          Clean temporary files weekly.
+
+Cron systex = * * * * * command_to_run
+              │ │ │ │ │
+              │ │ │ │ └── Day of Week (0-7)
+              │ │ │ └──── Month (1-12)
+              │ │ └────── Day of Month (1-31)
+              │ └──────── Hour (0-23)
+              └────────── Minute (0-59)
+Ex:- 30 2 * * * /home/user/backup.sh
+      Minute = 30
+      Hour = 2
+      Every day
+      Every month
+      Every weekday
+      
+      Ans = Runs at 2:30 AM daily.
+
+What is Crontab = Crontab (Cron Table) is a file that stores a user's scheduled cron jobs.
+
+Commands:  crontab -e   # Edit cron jobs
+            crontab -l   # List cron jobs
+            crontab -r   # Remove cron jobs
+User Cronjob stored = /var/spool/cron/ or /var/spool/cron/crontabs/
+System Cronjob stored = /etc/crontab
+Special cronjob Dirrcytories = /etc/cron.hourly/
+                              /etc/cron.daily/
+                              /etc/cron.weekly/
+                              /etc/cron.monthly/
+--------------------------------------------------------------------------------------------------------------
+---------------------------------- Links -----------------------------------------------------
+Links =  link is a pointer or shortcut that connects a filename to the actual data stored on the storage drive.
+:- Besically There are Two type of Links,
+a) Symbolic link ( Soft ) 
+b) Hard Link 
+-------------------------------------------------------------------------------------------------
+a) Symbolic link ( Soft ) = A symbolic link is a standalone file that stores the directory path of the target file. When you open a symlink,
+                              the system automatically redirects you to the target path. If the target file is renamed or deleted, 
+                            the soft link points to nothing and stops functioni
+soft link = ln -s [ Source path file ] and [ Destination path file ]  { f = fource fully create a link without its check there is a link present or not }
+Advantages:- Lesser in size than the source file.
+Dis-advantage:- If source file is deleted there is no use of soft link.
+------------------------------------------------------------------------------------------------
+Hard link = A hard link creates a direct correlation between a new file name and the underlying data storage block (inode).
+              In Linux, a file is only completely erased when all of its hard links are deleted. By default, every normal file you create 
+            has exactly one hard link. If you delete the original file name, you can still access the intact data through any remaining hard links
+Hard link = ln [ Source path file name ] [ Destination path file name ]
+Advantage:- It work wehen source file is deleted,
+Dis-advantage:- Size is same as source file it will consume so much spaces.
